@@ -3,7 +3,7 @@
   <Class Name="ClasesBase.Edificio">
     <Position X="4" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAGAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <HashCode>AAGAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAABAAAAAAw=</HashCode>
       <FileName>Edificio.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -17,12 +17,12 @@
   <Class Name="ClasesBase.Inquilino">
     <Position X="0.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAABAAAAQAAAAAAAAAAAAAAAgAgAA=</HashCode>
+      <HashCode>AAEAAAAAAAAAAAAAIBIAAAQAAAAAAAABAAAAAAgAgAA=</HashCode>
       <FileName>Inquilino.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ClasesBase.Alquiler">
-    <Position X="4" Y="2.75" Width="1.5" />
+    <Position X="7.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAACAAAAACAAAAgAgAAAAgAAAAAAAAAACgAAAA=</HashCode>
       <FileName>Alquiler.cs</FileName>

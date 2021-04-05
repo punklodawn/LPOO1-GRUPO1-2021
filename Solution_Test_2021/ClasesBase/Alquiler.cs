@@ -18,7 +18,7 @@ namespace ClasesBase
             }
         }
 
-        public datetime Alq_Fecha
+        public DateTime Alq_Fecha
         {
             get
             {
@@ -51,7 +51,7 @@ namespace ClasesBase
             }
         }
 
-        public datetime Alq_FechaDesde
+        public DateTime Alq_FechaDesde
         {
             get
             {
@@ -62,7 +62,7 @@ namespace ClasesBase
             }
         }
 
-        public datetime Alq_FechaHasta
+        public DateTime Alq_FechaHasta
         {
             get
             {

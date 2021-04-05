@@ -1,0 +1,5 @@
+E:\LPOO1\Proyectos y Más\git lpoo\LPOO1-GRUPO1-2021\Solution_Test_2021\ClasesBase\obj\Debug\ClasesBase.csprojResolveAssemblyReference.cache
+E:\LPOO1\Proyectos y Más\git lpoo\LPOO1-GRUPO1-2021\Solution_Test_2021\ClasesBase\bin\Debug\ClasesBase.dll
+E:\LPOO1\Proyectos y Más\git lpoo\LPOO1-GRUPO1-2021\Solution_Test_2021\ClasesBase\bin\Debug\ClasesBase.pdb
+E:\LPOO1\Proyectos y Más\git lpoo\LPOO1-GRUPO1-2021\Solution_Test_2021\ClasesBase\obj\Debug\ClasesBase.dll
+E:\LPOO1\Proyectos y Más\git lpoo\LPOO1-GRUPO1-2021\Solution_Test_2021\ClasesBase\obj\Debug\ClasesBase.pdb
