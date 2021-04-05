@@ -45,6 +45,7 @@
             this.Ingresar_btn.TabIndex = 0;
             this.Ingresar_btn.Text = "INGRESAR";
             this.Ingresar_btn.UseVisualStyleBackColor = true;
+            this.Ingresar_btn.Click += new System.EventHandler(this.Ingresar_btn_Click);
             // 
             // Usuario_lbl
             // 
