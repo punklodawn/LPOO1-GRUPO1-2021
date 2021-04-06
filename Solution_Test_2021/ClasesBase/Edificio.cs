@@ -8,44 +8,44 @@ namespace ClasesBase
     public class Edificio
     {
 
-        private int Edif_Codigo;
+        private int edif_codigo;
 
         public int Edif_Codigo1
         {
-            get { return Edif_Codigo; }
-            set { Edif_Codigo = value; }
+            get { return edif_codigo; }
+            set { edif_codigo = value; }
         }
-        private string Edif_Nombre;
+        private string edif_nombre;
 
         public string Edif_Nombre1
         {
-            get { return Edif_Nombre; }
-            set { Edif_Nombre = value; }
+            get { return edif_nombre; }
+            set { edif_nombre = value; }
         }
-        private string Edif_Direccion;
+        private string edif_direccion;
 
         public string Edif_Direccion1
         {
-            get { return Edif_Direccion; }
-            set { Edif_Direccion = value; }
+            get { return edif_direccion; }
+            set { edif_direccion = value; }
         }
-        private string Edif_Administrador;
+        private string edif_administrador;
 
         public string Edif_Administrador1
         {
-            get { return Edif_Administrador; }
-            set { Edif_Administrador = value; }
+            get { return edif_administrador; }
+            set { edif_administrador = value; }
         }
-        private string Edif_Telefono;
+        private string edif_telefono;
 
         public string Edif_Telefono1
         {
-            get { return Edif_Telefono; }
-            set { Edif_Telefono = value; }
+            get { return edif_telefono; }
+            set { edif_telefono = value; }
         }
         
         /*
-        private int Edif_Codigo
+        private int edif_codigo
         {
             get
             {
@@ -56,7 +56,7 @@ namespace ClasesBase
             }
         }
 
-        private String Edif_Nombre
+        private String edif_nombre
         {
             get
             {
@@ -67,7 +67,7 @@ namespace ClasesBase
             }
         }
 
-        public string Edif_Direccion
+        public string edif_direccion
         {
             get
             {
@@ -78,7 +78,7 @@ namespace ClasesBase
             }
         }
 
-        public string Edif_Administrador
+        public string edif_administrador
         {
             get
             {
@@ -89,7 +89,7 @@ namespace ClasesBase
             }
         }
 
-        public string Edif_Telefono
+        public string edif_telefono
         {
             get
             {

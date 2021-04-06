@@ -33,8 +33,8 @@
             this.inquilinosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.altaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.departamenteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.edificioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.altaDepartamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.edificioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.altaEdificioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
@@ -67,13 +67,13 @@
             this.inquilinosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.altaToolStripMenuItem});
             this.inquilinosToolStripMenuItem.Name = "inquilinosToolStripMenuItem";
-            this.inquilinosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.inquilinosToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.inquilinosToolStripMenuItem.Text = "Inquilinos";
             // 
             // altaToolStripMenuItem
             // 
             this.altaToolStripMenuItem.Name = "altaToolStripMenuItem";
-            this.altaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.altaToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.altaToolStripMenuItem.Text = "Alta Inquilinos";
             this.altaToolStripMenuItem.Click += new System.EventHandler(this.altaToolStripMenuItem_Click);
             // 
@@ -82,16 +82,8 @@
             this.departamenteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.altaDepartamentoToolStripMenuItem});
             this.departamenteToolStripMenuItem.Name = "departamenteToolStripMenuItem";
-            this.departamenteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.departamenteToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.departamenteToolStripMenuItem.Text = "Departamente";
-            // 
-            // edificioToolStripMenuItem
-            // 
-            this.edificioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.altaEdificioToolStripMenuItem});
-            this.edificioToolStripMenuItem.Name = "edificioToolStripMenuItem";
-            this.edificioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.edificioToolStripMenuItem.Text = "Edificio";
             // 
             // altaDepartamentoToolStripMenuItem
             // 
@@ -99,16 +91,24 @@
             this.altaDepartamentoToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.altaDepartamentoToolStripMenuItem.Text = "Alta Departamento";
             // 
+            // edificioToolStripMenuItem
+            // 
+            this.edificioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.altaEdificioToolStripMenuItem});
+            this.edificioToolStripMenuItem.Name = "edificioToolStripMenuItem";
+            this.edificioToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.edificioToolStripMenuItem.Text = "Edificio";
+            // 
             // altaEdificioToolStripMenuItem
             // 
             this.altaEdificioToolStripMenuItem.Name = "altaEdificioToolStripMenuItem";
-            this.altaEdificioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.altaEdificioToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.altaEdificioToolStripMenuItem.Text = "Alta Edificio";
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -120,7 +120,9 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Principal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Principal_FormClosing);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

@@ -7,39 +7,39 @@ namespace ClasesBase
 {
     public class Inquilino
     {
-        private int Inq_Codigo;
+        private int inq_codigo;
 
         public int Inq_Codigo1
         {
-            get { return Inq_Codigo; }
-            set { Inq_Codigo = value; }
+            get { return inq_codigo; }
+            set { inq_codigo = value; }
         }
-        private string Inq_Apellido;
+        private string inq_apellido;
 
         public string Inq_Apellido1
         {
-            get { return Inq_Apellido; }
-            set { Inq_Apellido = value; }
+            get { return inq_apellido; }
+            set { inq_apellido = value; }
         }
-        private string Inq_Nombre;
+        private string inq_nombre;
 
         public string Inq_Nombre1
         {
-            get { return Inq_Nombre; }
-            set { Inq_Nombre = value; }
+            get { return inq_nombre; }
+            set { inq_nombre = value; }
         }
-        private string Inq_Telefono;
+        private string inq_telefono;
 
         public string Inq_Telefono1
         {
-            get { return Inq_Telefono; }
-            set { Inq_Telefono = value; }
+            get { return inq_telefono; }
+            set { inq_telefono = value; }
         }
 
         
         
         /*
-        public int Inq_Codigo
+        public int inq_codigo
         {
             get
             {
@@ -50,7 +50,7 @@ namespace ClasesBase
             }
         }
 
-        public string Inq_Apellido
+        public string inq_apellido
         {
             get
             {
@@ -61,7 +61,7 @@ namespace ClasesBase
             }
         }
 
-        public string Inq_Nombre
+        public string inq_nombre
         {
             get
             {
@@ -72,7 +72,7 @@ namespace ClasesBase
             }
         }
 
-        public string Inq_Telefono
+        public string inq_telefono
         {
             get
             {

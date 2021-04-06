@@ -14,6 +14,7 @@ namespace Vistas
         public Principal()
         {
             InitializeComponent();
+
         }
 
         private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -23,14 +24,24 @@ namespace Vistas
 
         private void altaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AltaEdificio oAltaEdificio = new AltaEdificio();
+            AltaEdificio_Form oAltaEdificio = new AltaEdificio_Form();
             oAltaEdificio.Show();
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.Application.Exit();
-            //this.Close();
+                  
+        }
+
+        private void Principal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dialogo = MessageBox.Show("¿ Desea Salir de la Aplicacion S/N ?",
+                      "Salir de Aplicacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (dialogo == DialogResult.OK) {
+                System.Windows.Forms.Application.Exit();
+            }
+            else { e.Cancel = true; }
         }
     }
 }

@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace Vistas
 {
-    public partial class AltaDepartamento : Form
+    public partial class AltaDepartamento_Form : Form
     {
-        public AltaDepartamento()
+        public AltaDepartamento_Form()
         {
             InitializeComponent();
         }

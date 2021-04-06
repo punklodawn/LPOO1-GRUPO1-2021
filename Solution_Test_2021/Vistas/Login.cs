@@ -17,12 +17,6 @@ namespace Vistas
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
         private void Ingresar_btn_Click(object sender, EventArgs e)
         {
           Usuario oUsuario1 = new Usuario();
@@ -59,19 +53,26 @@ namespace Vistas
             {
 
                 MessageBox.Show("BIENVENIDO AL SISTEMA Admin");
-
                 Principal oprincipal = new Principal();
                 oprincipal.Show();
+                this.Hide();
+
 
             }
                            
             else if (u == oUsuario2.Usu_NombreUsuario1 && p == oUsuario2.Usu_Contraseña1)
             {
                 MessageBox.Show("BIENVENIDO AL SISTEMA Operador");
+                Principal oprincipal = new Principal();
+                oprincipal.Show();
+                this.Hide();
             }
             else if (u == oUsuario3.Usu_NombreUsuario1 && p == oUsuario3.Usu_Contraseña1)
             {
                 MessageBox.Show("BIENVENIDO AL SISTEMA Auditor");
+                Principal oprincipal = new Principal();
+                oprincipal.Show();
+                this.Hide();
             }
             else
             {
@@ -81,10 +82,49 @@ namespace Vistas
           
         }
 
-        private void Bienvenido_Form_Load(object sender, EventArgs e)
-        {
 
-        }
-        
+
+         private void Cerrar_btn_Click(object sender, EventArgs e)
+         {
+             System.Windows.Forms.Application.Exit();
+
+         }
+
+         private void Bienvenido_Form_FormClosing(object sender, FormClosingEventArgs e)
+         {
+             DialogResult dialogo = MessageBox.Show("¿ Desea Salir de la Aplicacion S/N ?",
+                          "Salir de Aplicacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+             if (dialogo == DialogResult.OK)
+             {
+                 System.Windows.Forms.Application.Exit();
+             }
+             else { e.Cancel = true; }
+         }
+
+         private void Ingresar_btn_MouseHover(object sender, EventArgs e)
+         {
+             Ingresar_btn.Width = 220;
+             Ingresar_btn.BackColor = Color.SteelBlue;
+         }
+
+         private void Ingresar_btn_MouseLeave(object sender, EventArgs e)
+         {
+             Ingresar_btn.Width = 200;
+             Ingresar_btn.BackColor = Color.LightBlue;
+         }
+
+         private void Cerrar_btn_MouseHover(object sender, EventArgs e)
+         {
+             Cerrar_btn.Width = 220;
+             Cerrar_btn.BackColor = Color.SteelBlue;
+         }
+
+         private void Cerrar_btn_MouseLeave(object sender, EventArgs e)
+         {
+             Cerrar_btn.Width = 200;
+             Cerrar_btn.BackColor = Color.LightBlue;
+         }
+
+
     }
 }

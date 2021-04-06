@@ -7,48 +7,48 @@ namespace ClasesBase
 {
     public class Usuario
     {
-        private int Usu_id;
+        private int usu_id;
 
         public int Usu_id1
         {
-            get { return Usu_id; }
-            set { Usu_id = value; }
+            get { return usu_id; }
+            set { usu_id = value; }
         }
 
 
-        private string Usu_NombreUsuario;
+        private string usu_nombreusuario;
 
         public string Usu_NombreUsuario1
         {
-            get { return Usu_NombreUsuario; }
-            set { Usu_NombreUsuario = value; }
+            get { return usu_nombreusuario; }
+            set { usu_nombreusuario = value; }
         }
 
 
-        private string Usu_Contraseña;
+        private string usu_contraseña;
 
         public string Usu_Contraseña1
         {
-            get { return Usu_Contraseña; }
-            set { Usu_Contraseña = value; }
+            get { return usu_contraseña; }
+            set { usu_contraseña = value; }
         }
 
 
-        private string Usu_ApellidoNombre;
+        private string usu_apellidonombre;
         public string Usu_ApellidoNombre1
         {
-            get { return Usu_ApellidoNombre; }
-            set { Usu_ApellidoNombre = value; }
+            get { return usu_apellidonombre; }
+            set { usu_apellidonombre = value; }
         }
 
 
-        private int Rol_Codigo;
+        private int rol_codigo;
         public int Rol_Codigo1
         {
-            get { return Rol_Codigo; }
+            get { return rol_codigo; }
 
 
-            set { Rol_Codigo = value; }
+            set { rol_codigo = value; }
         }
 
 
@@ -66,7 +66,7 @@ namespace ClasesBase
             }
         }
 
-        public string Usu_NombreUsuario
+        public string usu_nombreusuario
         {
             get
             {
@@ -77,7 +77,7 @@ namespace ClasesBase
             }
         }
 
-        public string Usu_Contraseña
+        public string usu_contraseña
         {
             get
             {
@@ -88,7 +88,7 @@ namespace ClasesBase
             }
         }
 
-        public string Usu_ApellidoNombre
+        public string usu_apellidonombre
         {
             get
             {
@@ -99,7 +99,7 @@ namespace ClasesBase
             }
         }
 
-        public int Rol_Codigo
+        public int rol_codigo
         {
             get
             {
