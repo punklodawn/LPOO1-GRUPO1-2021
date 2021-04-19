@@ -22,12 +22,6 @@ namespace Vistas
 
         }
 
-        private void altaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            AltaEdificio_Form oAltaEdificio = new AltaEdificio_Form();
-            oAltaEdificio.Show();
-        }
-
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.Application.Exit();
@@ -42,6 +36,26 @@ namespace Vistas
                 System.Windows.Forms.Application.Exit();
             }
             else { e.Cancel = true; }
+        }
+
+        private void altaEdificioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+            AltaEdificio_Form oAltaEdificio = new AltaEdificio_Form();
+            oAltaEdificio.Show();
+        }
+
+        private void altaDepartamentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AltaDepartamento_Form oAltaDepartamento = new AltaDepartamento_Form();
+            oAltaDepartamento.Show();
+        }
+
+        private void altaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AltaInquilinos_Form oAltaInquilinos = new AltaInquilinos_Form();
+            oAltaInquilinos.Show();
+
         }
     }
 }

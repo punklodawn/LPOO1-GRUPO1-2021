@@ -8,6 +8,7 @@ E:\LPOO1\Proyectos y Más\git lpoo\LPOO1-GRUPO1-2021\Solution_Test_2021\Vistas\b
 E:\LPOO1\Proyectos y Más\git lpoo\LPOO1-GRUPO1-2021\Solution_Test_2021\Vistas\bin\Debug\ClasesBase.pdb
 E:\LPOO1\Proyectos y Más\git lpoo\LPOO1-GRUPO1-2021\Solution_Test_2021\Vistas\obj\x86\Debug\Vistas.exe
 E:\LPOO1\Proyectos y Más\git lpoo\LPOO1-GRUPO1-2021\Solution_Test_2021\Vistas\obj\x86\Debug\Vistas.pdb
-E:\LPOO1\Proyectos y Más\git lpoo\LPOO1-GRUPO1-2021\Solution_Test_2021\Vistas\obj\x86\Debug\Vistas.AltaDepartamento.resources
-E:\LPOO1\Proyectos y Más\git lpoo\LPOO1-GRUPO1-2021\Solution_Test_2021\Vistas\obj\x86\Debug\Vistas.AltaEdificio.resources
 E:\LPOO1\Proyectos y Más\git lpoo\LPOO1-GRUPO1-2021\Solution_Test_2021\Vistas\obj\x86\Debug\Vistas.Principal.resources
+E:\LPOO1\Proyectos y Más\git lpoo\LPOO1-GRUPO1-2021\Solution_Test_2021\Vistas\obj\x86\Debug\Vistas.AltaDepartamento_Form.resources
+E:\LPOO1\Proyectos y Más\git lpoo\LPOO1-GRUPO1-2021\Solution_Test_2021\Vistas\obj\x86\Debug\Vistas.AltaEdificio_Form.resources
+E:\LPOO1\Proyectos y Más\git lpoo\LPOO1-GRUPO1-2021\Solution_Test_2021\Vistas\obj\x86\Debug\Vistas.AltaInquilinos_Form.resources
