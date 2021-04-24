@@ -86,19 +86,14 @@ namespace Vistas
 
          private void Cerrar_btn_Click(object sender, EventArgs e)
          {
-             System.Windows.Forms.Application.Exit();
-
-         }
-
-         private void Bienvenido_Form_FormClosing(object sender, FormClosingEventArgs e)
-         {
              DialogResult dialogo = MessageBox.Show("¿ Desea Salir de la Aplicacion S/N ?",
-                          "Salir de Aplicacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+               "Salir de Aplicacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
              if (dialogo == DialogResult.OK)
              {
                  System.Windows.Forms.Application.Exit();
              }
-             else { e.Cancel = true; }
+             else { }
+
          }
 
          private void Ingresar_btn_MouseHover(object sender, EventArgs e)

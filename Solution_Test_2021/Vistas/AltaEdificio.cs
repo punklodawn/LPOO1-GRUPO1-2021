@@ -19,21 +19,44 @@ namespace Vistas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            validar(this); //Llamo al metodo validar: Valida textbox no esten vacios.
-
-            if (vacio == false)
             {
-                Edificio oEdificio = new Edificio();
+                if (ValidarCampos())
+                {
 
-                MessageBox.Show("¿Desea dar de Alta el Edificio?");
+                    Edificio oEdificio = new Edificio();
+                    DialogResult dialog = MessageBox.Show("¿ Desea Agregar Edificio ?",
+                    "Agregar Edificio", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    if (dialog == DialogResult.OK)
+                    {
+                        oEdificio.Edif_Codigo1 = Convert.ToInt32(Codigo_Edificio_textBox.Text);
+                        oEdificio.Edif_Administrador1 = Administrador_Edificio_textBox.Text;
+                        oEdificio.Edif_Direccion1 = Direccion_Edificio_textBox.Text;
+                        oEdificio.Edif_Nombre1 = Nombre_Edificio_textBox.Text;
+                        oEdificio.Edif_Telefono1 = Telefono_Edificio_textBox.Text;
+                        MessageBox.Show("Edificio Cargado!");
+                        ClearTexForm();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Edificio Cancelado");
+                        ClearTexForm();
+                    }
 
-                oEdificio.Edif_Administrador1 = Codigo_Administrador_Edificio_textBox.Text;
-                oEdificio.Edif_Codigo1 = Convert.ToInt32(Codigo_Edificio_textBox.Text);
-                oEdificio.Edif_Direccion1 = Codigo_Direccion_textBox.Text;
-                oEdificio.Edif_Nombre1 = Codigo_Nombre_textBox.Text;
-                oEdificio.Edif_Telefono1 = Codigo_Telefono_textBox.Text;
+                }
+                else
+                {
+                    Error_Codigo_Edi_lbl.Text = "solo numeros";
+                    Error_Administrador_Edi_lbl.Text = "solo letras";
+                    Error_Direccion_Edi_lbl.Text = "solo letras";
+                    Error_Nombre_Edi_lbl.Text = "solo letras";
+                    Error_Telefono_Edi_lbl.Text = "solo letras";
+                    Error_Codigo_Edi_lbl.Visible = true;
+                    Error_Administrador_Edi_lbl.Visible = true;
+                    Error_Direccion_Edi_lbl.Visible = true;
+                    Error_Nombre_Edi_lbl.Visible = true;
+                    Error_Telefono_Edi_lbl.Visible = true;
 
-                MessageBox.Show("edificio cargado!");
+                }
             }
        }
         
@@ -41,7 +64,6 @@ namespace Vistas
        private void Salir_Edificio_btn_Click(object sender, EventArgs e)
        {
            this.Close();
-            //System.Windows.Forms.Application.Exit();
        }
         
         
@@ -56,28 +78,57 @@ namespace Vistas
             { e.Cancel = true; }
         }
 
-
-        public bool vacio; // Variable utilizada para saber si hay algún TextBox vacio.
-
-        private void validar(Form formulario)//Metodo para validar
+        private void ClearTexForm()
         {
-            foreach (Control oControls in formulario.Controls) // Busca en cada TextBox de nuestro Formulario.
+
+            Codigo_Edificio_textBox.Text = "";
+            Administrador_Edificio_textBox.Text = "";
+            Direccion_Edificio_textBox.Text = "";
+            Nombre_Edificio_textBox.Text = "";
+            Telefono_Edificio_textBox.Text = "";
+            Error_Codigo_Edi_lbl.Text = "";
+            Error_Administrador_Edi_lbl.Text = "";
+            Error_Direccion_Edi_lbl.Text = "";
+            Error_Nombre_Edi_lbl.Text = "";
+            Error_Telefono_Edi_lbl.Text = "";
+        }
+
+        private bool ValidarCampos()
+        {
+            bool ok = true;
+
+            if (Codigo_Edificio_textBox.Text == "")
             {
-                if (oControls is TextBox & oControls.Text == String.Empty) // Verifica que no este vacio.
-                {
-                    vacio = true; // Si esta vacio el TextBox asignamos el valor True a la variable.
-                }
+                ok = false;
+                MessageBox.Show(Codigo_Edificio_textBox, "Ingrese Codigo");
+            }
+            if (Codigo_Edificio_textBox.Text == "")
+            {
+                ok = false;
+                MessageBox.Show(Administrador_Edificio_textBox, "Ingrese Administrador");
+            }
+            if (Direccion_Edificio_textBox.Text == "")
+            {
+                ok = false;
+                MessageBox.Show(Direccion_Edificio_textBox, "Ingrese una Direccion");
+            }
+            if (Nombre_Edificio_textBox.Text == "")
+            {
+                ok = false;
+                MessageBox.Show(Nombre_Edificio_textBox, "Ingrese un Nombre");
+            }
+            if (Telefono_Edificio_textBox.Text == "")
+            {
+                ok = false;
+                MessageBox.Show(Telefono_Edificio_textBox, "Ingrese un Telefono");
             }
 
-            if (vacio == true)//Condicional si es true es porque estan vacios los textbox mando un msj
-            {
-                MessageBox.Show("Favor de llenar todos los campos"); // Si la variable es verdadera muestra un mensaje.
-                vacio = true;// asigna a  la variable el valor true.
-            }
-            else
-            {
-                vacio = false;// asigna a la variable el valor false
-            }
+            return ok;
+        }
+
+        private void AltaEdificio_Form_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

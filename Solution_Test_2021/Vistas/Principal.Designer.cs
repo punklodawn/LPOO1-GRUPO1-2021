@@ -60,7 +60,6 @@
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
             this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.usuariosToolStripMenuItem.Text = "MENU";
-            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // inquilinosToolStripMenuItem
             // 
@@ -73,7 +72,7 @@
             // altaToolStripMenuItem
             // 
             this.altaToolStripMenuItem.Name = "altaToolStripMenuItem";
-            this.altaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.altaToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.altaToolStripMenuItem.Text = "Alta Inquilinos";
             this.altaToolStripMenuItem.Click += new System.EventHandler(this.altaToolStripMenuItem_Click);
             // 
@@ -83,7 +82,7 @@
             this.altaDepartamentoToolStripMenuItem});
             this.departamenteToolStripMenuItem.Name = "departamenteToolStripMenuItem";
             this.departamenteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.departamenteToolStripMenuItem.Text = "Departamente";
+            this.departamenteToolStripMenuItem.Text = "Departamento";
             // 
             // altaDepartamentoToolStripMenuItem
             // 
@@ -103,7 +102,7 @@
             // altaEdificioToolStripMenuItem
             // 
             this.altaEdificioToolStripMenuItem.Name = "altaEdificioToolStripMenuItem";
-            this.altaEdificioToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.altaEdificioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.altaEdificioToolStripMenuItem.Text = "Alta Edificio";
             this.altaEdificioToolStripMenuItem.Click += new System.EventHandler(this.altaEdificioToolStripMenuItem_Click);
             // 
@@ -119,12 +118,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(438, 228);
+            this.ControlBox = false;
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Principal_FormClosing);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

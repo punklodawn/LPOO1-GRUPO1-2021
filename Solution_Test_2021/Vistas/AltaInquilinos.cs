@@ -15,7 +15,7 @@ namespace Vistas
         public AltaInquilinos_Form()
         {
             InitializeComponent();
-            this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;  
+        
 
         }
         
@@ -23,61 +23,45 @@ namespace Vistas
         private void Aceptar_Edificio_btn_Click(object sender, EventArgs e)
         {
             {
-
-                if (this.ValidateChildren(ValidationConstraints.Enabled)) 
+                if (ValidarCampos())
                 {
+
                     Inquilino oInquilino = new Inquilino();
-                    MessageBox.Show("¿Desea dar de Alta el Inquilino?");
-                    oInquilino.Inq_Codigo1 = Convert.ToInt32(Codigo_Inquilino_textBox.Text);
-                    oInquilino.Inq_Nombre1 = Nombre_Inquilino_textBox.Text;
-                    oInquilino.Inq_Apellido1 = Apellido_Inquilino_textBox.Text;
-                    oInquilino.Inq_Telefono1 = Telefono_Inquilino_textBox.Text;
-                    MessageBox.Show("Inquilino Cargado!");
-                } 
-                else
-                { MessageBox.Show("Faltan algunos campos por rellenar"); }
+                    DialogResult dialog = MessageBox.Show("¿ Desea Agregar Inquilino ?",
+                    "Agregar Inquilino", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    if (dialog == DialogResult.OK)
+                    {
+                        oInquilino.Inq_Codigo1 = Convert.ToInt32(Codigo_Inquilino_textBox.Text);
+                        oInquilino.Inq_Nombre1 = Nombre_Inquilino_textBox.Text;
+                        oInquilino.Inq_Apellido1 = Apellido_Inquilino_textBox.Text;
+                        oInquilino.Inq_Telefono1 = Telefono_Inquilino_textBox.Text;
+                        MessageBox.Show("Inquilino Cargado!");
+                        ClearTexForm();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Inquilino Cancelado");
+                        ClearTexForm();
+                    }
 
-                //if (Codigo_Inquilino_textBox.Text == "" && Nombre_Inquilino_textBox.Text == "" && Apellido_Inquilino_textBox.Text == "" && Telefono_Inquilino_textBox.Text == "")
-                //{
-                //    Error_lbl.Text = "Los campos no deben estar vacios";
-                //    Error_lbl.Visible = true;
-                //}
-                //else
-                //{
-                //    Inquilino oInquilino = new Inquilino();
-                //    MessageBox.Show("¿Desea dar de Alta el Inquilino?");
-                //    oInquilino.Inq_Codigo1 = Convert.ToInt32(Codigo_Inquilino_textBox.Text);
-                //    oInquilino.Inq_Nombre1 = Nombre_Inquilino_textBox.Text;
-                //    oInquilino.Inq_Apellido1 = Apellido_Inquilino_textBox.Text;
-                //    oInquilino.Inq_Telefono1 = Telefono_Inquilino_textBox.Text;
-                //    MessageBox.Show("Inquilino Cargado!");
-                //}
-                ClearTexForm();
+                }
+                else {
 
+                    Error_lbl.Text = "Los campos no deben estar vacios";
+                    Error_Codigo_lbl.Text = "solo numeros";
+                    Error_Nombre_lbl.Text = "solo letras";
+                    Error_Apellido_lbl.Text = "solo letras";
+                    Error_Telefono_lbl.Text = "solo numeros";
+                    Error_lbl.Visible = true;
+                    Error_Codigo_lbl.Visible = true;
+                    Error_Nombre_lbl.Visible = true;
+                    Error_Apellido_lbl.Visible = true;
+                    Error_Telefono_lbl.Visible = true;
+
+                }
             }
         }
-
-        //Boton salir, al hacer click en salir en nuestro formulario acciona este evento.
-        private void Salir_Edificio_btn_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        //Evento _FormClosing, se acciona al cerrar nuestro fomulario,
-        //previamente enviando un mensaje de confirmacion.
-        private void AltaInquilinos_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            DialogResult dialogo = MessageBox.Show("¿ Desea Salir de la Aplicacion S/N ?",
-                "Salir de Aplicacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-            if (dialogo == DialogResult.OK)
-            {
-            }
-            else { e.Cancel = true; }
-        }
-
-
-
-      
+        
 
         //limpia los textbox.
         private void ClearTexForm()
@@ -87,11 +71,16 @@ namespace Vistas
             Nombre_Inquilino_textBox.Text ="";
             Apellido_Inquilino_textBox.Text = "";
             Telefono_Inquilino_textBox.Text = "";
-
+            Error_lbl.Text = "";
+            Error_Codigo_lbl.Text = "";
+            Error_Nombre_lbl.Text = "";
+            Error_Apellido_lbl.Text = "";
+            Error_Telefono_lbl.Text = "";
         }
 
         /// <summary>
         /// validar con evento keypress, con la clase validar.
+        /// controla los textbox
         /// </summary>
         /// <param name="Validar"></param>
         private void Nombre_Inquilino_textBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -115,23 +104,56 @@ namespace Vistas
         }
 
 
+        //Valida si los campos estan vacios.
+        private bool ValidarCampos() {
+            bool ok = true;
 
-        private void textboxes_Validating(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            TextBox tb = (TextBox)sender;
-            if (tb.Text == "")
+            if (Codigo_Inquilino_textBox.Text=="")
             {
-                e.Cancel = true;
-                tb.Select(0, tb.Text.Length);
-                MessageBox.Show(tb, "Debe introducir el nombre");
+                ok = false;
+                MessageBox.Show(Codigo_Inquilino_textBox, "Ingrese Codigo");
             }
+            if (Nombre_Inquilino_textBox.Text == "")
+            {
+                ok = false;
+                MessageBox.Show(Nombre_Inquilino_textBox, "Ingrese un Nombre");
+            }
+            if (Apellido_Inquilino_textBox.Text == "")
+            {
+                ok = false;
+                MessageBox.Show(Apellido_Inquilino_textBox, "Ingrese un Apellido");
+            }
+            if (Telefono_Inquilino_textBox.Text == "")
+            {
+                ok = false;
+                MessageBox.Show(Telefono_Inquilino_textBox, "Ingrese un Telefono");
+            }
+
+            return ok;
         }
 
-        private void textboxes_Validated(object sender, System.EventArgs e)
+
+        //Boton salir, al hacer click en salir en nuestro formulario acciona este evento.
+        private void Salir_Inquilino_btn_Click_1(object sender, EventArgs e)
         {
-            TextBox tb = (TextBox)sender;
-            MessageBox.Show(tb, "");
+            this.Close();
         }
+
+
+
+        //Evento _FormClosing, se acciona al cerrar nuestro fomulario,
+        //previamente enviando un mensaje de confirmacion.
+        private void AltaInquilinos_Form_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dialogo = MessageBox.Show("¿ Desea Salir del formulario S/N ?",
+        "Salir de Aplicacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (dialogo == DialogResult.OK)
+            {
+            }
+            else
+            { e.Cancel = true; }
+        }
+
 
     }
 }

@@ -28,29 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Salir_Edificio_btn = new System.Windows.Forms.Button();
+            this.Salir_Inquilino_btn = new System.Windows.Forms.Button();
             this.Aceptar_Edificio_btn = new System.Windows.Forms.Button();
             this.Telefono_Inquilino_textBox = new System.Windows.Forms.TextBox();
             this.Apellido_Inquilino_textBox = new System.Windows.Forms.TextBox();
             this.Nombre_Inquilino_textBox = new System.Windows.Forms.TextBox();
             this.Codigo_Inquilino_textBox = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.Nombre_lbl = new System.Windows.Forms.Label();
+            this.Telefono_lbl = new System.Windows.Forms.Label();
+            this.Apellido_lbl = new System.Windows.Forms.Label();
+            this.Codigo_lbl = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Error_lbl = new System.Windows.Forms.Label();
+            this.Error_Codigo_lbl = new System.Windows.Forms.Label();
+            this.Error_Nombre_lbl = new System.Windows.Forms.Label();
+            this.Error_Apellido_lbl = new System.Windows.Forms.Label();
+            this.Error_Telefono_lbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // Salir_Edificio_btn
+            // Salir_Inquilino_btn
             // 
-            this.Salir_Edificio_btn.Location = new System.Drawing.Point(329, 180);
-            this.Salir_Edificio_btn.Name = "Salir_Edificio_btn";
-            this.Salir_Edificio_btn.Size = new System.Drawing.Size(108, 42);
-            this.Salir_Edificio_btn.TabIndex = 25;
-            this.Salir_Edificio_btn.Text = "SALIR";
-            this.Salir_Edificio_btn.UseVisualStyleBackColor = true;
-            this.Salir_Edificio_btn.Click += new System.EventHandler(this.Salir_Edificio_btn_Click);
+            this.Salir_Inquilino_btn.Location = new System.Drawing.Point(329, 180);
+            this.Salir_Inquilino_btn.Name = "Salir_Inquilino_btn";
+            this.Salir_Inquilino_btn.Size = new System.Drawing.Size(108, 42);
+            this.Salir_Inquilino_btn.TabIndex = 25;
+            this.Salir_Inquilino_btn.Text = "SALIR";
+            this.Salir_Inquilino_btn.UseVisualStyleBackColor = true;
+            this.Salir_Inquilino_btn.Click += new System.EventHandler(this.Salir_Inquilino_btn_Click_1);
             // 
             // Aceptar_Edificio_btn
             // 
@@ -113,45 +117,45 @@
             this.Codigo_Inquilino_textBox.TabIndex = 19;
             this.Codigo_Inquilino_textBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Codigo_Inquilino_textBox_KeyPress);
             // 
-            // label6
+            // Nombre_lbl
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(122, 82);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(57, 16);
-            this.label6.TabIndex = 18;
-            this.label6.Text = "Nombre";
+            this.Nombre_lbl.AutoSize = true;
+            this.Nombre_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nombre_lbl.Location = new System.Drawing.Point(122, 82);
+            this.Nombre_lbl.Name = "Nombre_lbl";
+            this.Nombre_lbl.Size = new System.Drawing.Size(57, 16);
+            this.Nombre_lbl.TabIndex = 18;
+            this.Nombre_lbl.Text = "Nombre";
             // 
-            // label5
+            // Telefono_lbl
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(117, 143);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 16);
-            this.label5.TabIndex = 17;
-            this.label5.Text = "Telefono";
+            this.Telefono_lbl.AutoSize = true;
+            this.Telefono_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Telefono_lbl.Location = new System.Drawing.Point(117, 143);
+            this.Telefono_lbl.Name = "Telefono_lbl";
+            this.Telefono_lbl.Size = new System.Drawing.Size(62, 16);
+            this.Telefono_lbl.TabIndex = 17;
+            this.Telefono_lbl.Text = "Telefono";
             // 
-            // label3
+            // Apellido_lbl
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(121, 111);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 16);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "Apellido";
+            this.Apellido_lbl.AutoSize = true;
+            this.Apellido_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Apellido_lbl.Location = new System.Drawing.Point(121, 111);
+            this.Apellido_lbl.Name = "Apellido_lbl";
+            this.Apellido_lbl.Size = new System.Drawing.Size(58, 16);
+            this.Apellido_lbl.TabIndex = 15;
+            this.Apellido_lbl.Text = "Apellido";
             // 
-            // label2
+            // Codigo_lbl
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(127, 49);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 16);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Codigo";
+            this.Codigo_lbl.AutoSize = true;
+            this.Codigo_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Codigo_lbl.Location = new System.Drawing.Point(127, 49);
+            this.Codigo_lbl.Name = "Codigo_lbl";
+            this.Codigo_lbl.Size = new System.Drawing.Size(52, 16);
+            this.Codigo_lbl.TabIndex = 14;
+            this.Codigo_lbl.Text = "Codigo";
             // 
             // label1
             // 
@@ -171,31 +175,66 @@
             this.Error_lbl.AutoSize = true;
             this.Error_lbl.Location = new System.Drawing.Point(182, 232);
             this.Error_lbl.Name = "Error_lbl";
-            this.Error_lbl.Size = new System.Drawing.Size(29, 13);
+            this.Error_lbl.Size = new System.Drawing.Size(0, 13);
             this.Error_lbl.TabIndex = 26;
-            this.Error_lbl.Text = "Error";
+            // 
+            // Error_Codigo_lbl
+            // 
+            this.Error_Codigo_lbl.AutoSize = true;
+            this.Error_Codigo_lbl.Location = new System.Drawing.Point(445, 52);
+            this.Error_Codigo_lbl.Name = "Error_Codigo_lbl";
+            this.Error_Codigo_lbl.Size = new System.Drawing.Size(0, 13);
+            this.Error_Codigo_lbl.TabIndex = 27;
+            // 
+            // Error_Nombre_lbl
+            // 
+            this.Error_Nombre_lbl.AutoSize = true;
+            this.Error_Nombre_lbl.Location = new System.Drawing.Point(445, 82);
+            this.Error_Nombre_lbl.Name = "Error_Nombre_lbl";
+            this.Error_Nombre_lbl.Size = new System.Drawing.Size(0, 13);
+            this.Error_Nombre_lbl.TabIndex = 28;
+            // 
+            // Error_Apellido_lbl
+            // 
+            this.Error_Apellido_lbl.AutoSize = true;
+            this.Error_Apellido_lbl.Location = new System.Drawing.Point(445, 113);
+            this.Error_Apellido_lbl.Name = "Error_Apellido_lbl";
+            this.Error_Apellido_lbl.Size = new System.Drawing.Size(0, 13);
+            this.Error_Apellido_lbl.TabIndex = 29;
+            // 
+            // Error_Telefono_lbl
+            // 
+            this.Error_Telefono_lbl.AutoSize = true;
+            this.Error_Telefono_lbl.Location = new System.Drawing.Point(445, 143);
+            this.Error_Telefono_lbl.Name = "Error_Telefono_lbl";
+            this.Error_Telefono_lbl.Size = new System.Drawing.Size(0, 13);
+            this.Error_Telefono_lbl.TabIndex = 30;
             // 
             // AltaInquilinos_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(633, 275);
+            this.Controls.Add(this.Error_Telefono_lbl);
+            this.Controls.Add(this.Error_Apellido_lbl);
+            this.Controls.Add(this.Error_Nombre_lbl);
+            this.Controls.Add(this.Error_Codigo_lbl);
             this.Controls.Add(this.Error_lbl);
-            this.Controls.Add(this.Salir_Edificio_btn);
+            this.Controls.Add(this.Salir_Inquilino_btn);
             this.Controls.Add(this.Aceptar_Edificio_btn);
             this.Controls.Add(this.Telefono_Inquilino_textBox);
             this.Controls.Add(this.Apellido_Inquilino_textBox);
             this.Controls.Add(this.Nombre_Inquilino_textBox);
             this.Controls.Add(this.Codigo_Inquilino_textBox);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.Nombre_lbl);
+            this.Controls.Add(this.Telefono_lbl);
+            this.Controls.Add(this.Apellido_lbl);
+            this.Controls.Add(this.Codigo_lbl);
             this.Controls.Add(this.label1);
             this.Name = "AltaInquilinos_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AltaInquilinos";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AltaInquilinos_FormClosing);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AltaInquilinos_Form_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,17 +242,21 @@
 
         #endregion
 
-        private System.Windows.Forms.Button Salir_Edificio_btn;
+        private System.Windows.Forms.Button Salir_Inquilino_btn;
         private System.Windows.Forms.Button Aceptar_Edificio_btn;
         private System.Windows.Forms.TextBox Telefono_Inquilino_textBox;
         private System.Windows.Forms.TextBox Apellido_Inquilino_textBox;
         private System.Windows.Forms.TextBox Nombre_Inquilino_textBox;
         private System.Windows.Forms.TextBox Codigo_Inquilino_textBox;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label Nombre_lbl;
+        private System.Windows.Forms.Label Telefono_lbl;
+        private System.Windows.Forms.Label Apellido_lbl;
+        private System.Windows.Forms.Label Codigo_lbl;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Error_lbl;
+        private System.Windows.Forms.Label Error_Codigo_lbl;
+        private System.Windows.Forms.Label Error_Nombre_lbl;
+        private System.Windows.Forms.Label Error_Apellido_lbl;
+        private System.Windows.Forms.Label Error_Telefono_lbl;
     }
 }

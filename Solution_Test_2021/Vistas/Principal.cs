@@ -17,27 +17,21 @@ namespace Vistas
 
         }
 
-        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            System.Windows.Forms.Application.Exit();
+            DialogResult dialogo = MessageBox.Show("¿ Desea Salir de la Aplicacion S/N ?",
+                    "Salir de Aplicacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (dialogo == DialogResult.OK)
+            {
+                System.Windows.Forms.Application.Exit();
+            }
+            else { }
+            
                   
         }
 
-        private void Principal_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            DialogResult dialogo = MessageBox.Show("¿ Desea Salir de la Aplicacion S/N ?",
-                      "Salir de Aplicacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-            if (dialogo == DialogResult.OK) {
-                System.Windows.Forms.Application.Exit();
-            }
-            else { e.Cancel = true; }
-        }
-
+    
         private void altaEdificioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             
